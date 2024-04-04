@@ -1,14 +1,12 @@
-require("dotenv").config(); // Load environment variables from .env file
-
 const express = require("express");
 const bodyParser = require("body-parser");
-const cors = require("cors");
+const cors = require("cors"); // Import cors
 const db = require("../database");
 
 const app = express();
 
 app.use(bodyParser.json());
-app.use(cors());
+app.use(cors()); // Use cors middleware
 
 // Get all categories
 app.get("/api/category", (req, res) => {
@@ -93,7 +91,7 @@ app.get("/api/dua/:id", (req, res) => {
   });
 });
 
-const PORT = process.env.PORT || 8800;
+const PORT = process.env.PORT || 8801;
 app.listen(PORT, () => {
   console.log(`Server listening on port ${PORT}`);
 });
