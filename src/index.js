@@ -3,7 +3,7 @@ require("dotenv").config(); // Load environment variables from .env file
 const express = require("express");
 const bodyParser = require("body-parser");
 const cors = require("cors");
-const db = require("./database");
+const db = require("../database");
 
 const app = express();
 
